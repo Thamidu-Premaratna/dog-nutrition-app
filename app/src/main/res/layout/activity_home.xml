@@ -9,23 +9,46 @@
         android:id="@+id/coordinatorLayout">
 
     <com.google.android.material.appbar.AppBarLayout
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
             android:layout_width="0dp"
             android:theme="@style/Theme.DogNutritionApp.AppBarOverlay"
             android:id="@+id/appBarLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/frameLayout"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/main">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="16dp"
+                            android:drawablePadding="16dp"
+                            app:drawableStartCompat="@drawable/baseline_arrow_back_ios_24"
+                            app:drawableTint="@color/black"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PawPal"
+                            android:textSize="18sp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="16dp"
+                            android:textColor="@color/black"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="224dp"
+                            android:layout_gravity="center_vertical"
+                            app:drawableEndCompat="@drawable/baseline_add_shopping_cart_24"
+                            app:drawableTint="@color/black"/>
 
-        <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:background="#FDB522"
-                app:popupTheme="@style/Theme.DogNutritionApp.PopupOverlay"
-                android:layout_height="wrap_content"
-                />
-
+            </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
