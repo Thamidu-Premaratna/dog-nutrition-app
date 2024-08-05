@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:text="@string/registerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/darumadrop_one"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="96dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textStyle="bold"/>
+
+            <EditText
+                    android:layout_width="265dp"
+                    android:layout_height="48dp"
+                    android:inputType="text"
+                    android:ems="10"
+                    android:id="@+id/etName"
+                    android:background="@drawable/text_box"
+                    android:drawableStart="@drawable/baseline_person_24"
+                    android:padding="12dp"
+                    android:drawableTint="#A6A6A6"
+                    android:drawablePadding="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:hint="Your Name"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3"
+                    android:layout_marginTop="24dp"/>
+
+            <EditText
+                    android:layout_width="265dp"
+                    android:layout_height="48dp"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/etEmail"
+                    android:background="@drawable/text_box"
+                    android:drawablePadding="8dp"
+                    android:textAlignment="center"
+                    android:drawableStart="@drawable/baseline_email_24"
+                    android:padding="12dp"
+                    android:textColor="@color/gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etName"
+                    android:layout_marginTop="24dp"
+                    android:textSize="14sp"
+                    app:layout_constraintHorizontal_bias="0.503"
+                    android:hint="Email Address"/>
+
+            <EditText
+                    android:layout_width="265dp"
+                    android:layout_height="48dp"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/etPassword"
+                    android:background="@drawable/text_box"
+                    android:drawablePadding="8dp"
+                    android:textAlignment="center"
+                    android:drawableStart="@drawable/baseline_lock_24"
+                    android:padding="12dp"
+                    android:textColor="@color/gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etEmail"
+                    android:layout_marginTop="24dp"
+                    android:hint="Password"
+                    android:textSize="14sp"/>
+
+            <EditText
+                    android:layout_width="265dp"
+                    android:layout_height="48dp"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/etConfirmPassword"
+                    android:background="@drawable/text_box"
+                    android:drawablePadding="8dp"
+                    android:textAlignment="center"
+                    android:drawableStart="@drawable/baseline_lock_24"
+                    android:padding="12dp"
+                    android:textColor="@color/gray"
+                    app:layout_constraintTop_toBottomOf="@+id/etPassword"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:hint="Confirm Password"
+                    android:textSize="14sp"
+                    android:layout_marginTop="24dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:text="@string/registerBtn"
+                    android:background="@drawable/button_selector"
+                    android:drawablePadding="8dp"
+                    android:layout_width="265dp"
+                    android:layout_height="48dp"
+                    android:id="@+id/btnRegister"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword"
+                    app:layout_constraintHorizontal_bias="0.503"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                    android:text="@string/alreadyRegisteredText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvLogin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnRegister"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.501"
+                    app:layout_constraintVertical_bias="0.156"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/main"/>
+
+            <ProgressBar
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword"
+                    app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/progressBar"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
